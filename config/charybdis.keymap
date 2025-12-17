@@ -3,6 +3,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     chosen { zmk,matrix_transform = &default_transform; };
@@ -34,41 +35,41 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &mkp MB1  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans
             >;
         };
 
         scroll_layer {
             bindings = <
-&trans       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans       &trans  &trans  &trans  &trans  &trans          &trans  &kp N7  &kp N8  &kp N9  &trans   &kp F12
-&trans       &trans  &trans  &trans  &trans  &trans          &trans  &kp N4  &kp N5  &kp N6  &trans   &trans
-&bootloader  &trans  &trans  &trans  &trans  &trans          &trans  &kp N1  &kp N2  &kp N3  &trans   &trans
-             &trans  &trans  &trans  &trans  &trans  &trans          &kp N0          &trans
+&trans             &kp F1              &kp F2     &kp F3                       &kp F4                         &kp LS(F5)     &kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans             &kp LS(UNDERSCORE)  &kp LC(W)  &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))          &trans  &kp N7  &kp N8  &kp N9  &trans   &kp F12
+&kp LC(BACKSPACE)  &kp LC(A)           &kp LC(S)  &trans                       &trans                         &trans                 &trans  &kp N4  &kp N5  &kp N6  &trans   &trans
+&bootloader        &kp LC(Z)           &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans                 &trans  &kp N1  &kp N2  &kp N3  &trans   &trans
+                   &trans              &trans     &trans                       &trans                         &trans         &trans          &kp N0          &trans
             >;
         };
 
         arrow_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans      &trans        &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &bootloader
-            &trans        &trans  &trans  &trans  &trans  &trans          &trans          &trans
+&bt BT_CLR  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans             &trans    &trans    &trans     &trans  &trans
+&trans      &trans        &trans  &trans  &trans  &trans          &kp PSCRN  &trans    &kp UP    &trans     &trans  &trans
+&trans      &trans        &trans  &trans  &trans  &trans          &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans      &trans        &trans  &trans  &trans  &trans          &trans     &trans    &trans    &trans     &trans  &bootloader
+            &mo 4         &trans  &trans  &trans  &trans  &trans             &trans              &trans
             >;
         };
 
         arrow_layer2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans     &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &kp PG_UP  &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &kp HOME  &kp PG_DN  &kp END  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans     &trans   &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans
             >;
         };
     };
