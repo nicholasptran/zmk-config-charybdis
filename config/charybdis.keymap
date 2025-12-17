@@ -18,6 +18,21 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        csharp_lambda {
+            bindings = <&csharp_lambda>;
+            key-positions = <50 11>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        csharp_lambda: csharp_lambda {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp EQUAL &kp GT &kp SPACE>;
+            label = "CSHARP_LAMBDA";
+        };
     };
 
     keymap {
@@ -31,6 +46,8 @@
 &kp LSHIFT     &mt LCTRL Z  &kp X      &kp C         &kp V      &kp B                  &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
                &mo 2        &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &gresc  &kp RIGHT_GUI         &kp ENTER             &mo 3
             >;
+
+            label = "QWRT";
         };
 
         mouse_layer {
@@ -41,6 +58,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &mkp MB1  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans
             >;
+
+            label = "MOUSE";
         };
 
         scroll_layer {
@@ -51,6 +70,8 @@
 &bootloader        &kp LC(Z)           &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans                 &trans  &kp N1  &kp N2  &kp N3  &trans   &trans
                    &trans              &trans     &trans                       &trans                         &trans         &trans          &kp N0          &trans
             >;
+
+            label = "SCROLL";
         };
 
         arrow_layer {
