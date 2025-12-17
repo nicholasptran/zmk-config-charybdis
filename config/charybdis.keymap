@@ -35,6 +35,17 @@
         };
     };
 
+    behaviors {
+        lmt: layer_mouse_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "layer mouse tap";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -52,10 +63,10 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &mkp MB1  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &lmt 2 MB3  &mkp MB2
+&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &mkp MB1  &trans      &trans
         &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans
             >;
 
