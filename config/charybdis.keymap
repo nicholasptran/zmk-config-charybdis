@@ -10,18 +10,6 @@
     chosen { zmk,matrix_transform = &default_transform; };
 };
 
-&mt {
-    quick-tap-ms = <200>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
-&lt {
-    quick-tap-ms = <200>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
