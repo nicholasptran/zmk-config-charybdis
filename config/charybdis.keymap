@@ -53,11 +53,12 @@
 
         default_layer {
             bindings = <
-&kp MINUS      &kp N1       &kp N2     &kp N3        &kp N4     &kp N5  &kp N6                &kp N7     &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB        &kp Q        &kp W      &kp E         &kp R      &kp T                  &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp BACKSPACE  &kp A        &kp S      &kp D         &kp F      &kp G                  &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHIFT     &mt LCTRL Z  &kp X      &kp C         &kp V      &kp B                  &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-               &mo 2        &kp LCTRL  &kp LEFT_ALT  &kp SPACE  &gresc  &kp RIGHT_GUI         &kp ENTER             &mo 3
+&kp MINUS      &kp N1       &kp N2  &kp N3        &kp N4     &kp N5       &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB        &kp Q        &kp W   &kp E         &kp R      &kp T        &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
+&kp BACKSPACE  &kp A        &kp S   &kp D         &kp F      &kp G        &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHIFT     &mt LCTRL Z  &kp X   &kp C         &kp V      &kp B        &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                                    &kp LEFT_ALT  &kp SPACE  &mo 2        &mo 3          &kp ENTER
+                                                  &gresc     &kp LCTRL    &kp RIGHT_GUI
             >;
 
             label = "QWRT";
@@ -65,11 +66,12 @@
 
         mouse_layer {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none         &none  &none  &none     &none       &none
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none     &none       &none
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &none     &lmt 2 MB3  &mkp MB2
-&none  &none  &none  &none  &none  &none         &none  &none  &none  &mkp MB1  &none       &none
-       &none  &none  &none  &none  &none  &none         &none         &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none     &none     &none       &none
+&none  &none  &none  &none  &none  &none    &none  &none  &none     &none     &none       &none
+&none  &none  &none  &none  &none  &none    &none  &none  &mkp MB5  &none     &lmt 2 MB3  &mkp MB2
+&none  &none  &none  &none  &none  &none    &none  &none  &mkp MB4  &mkp MB1  &none       &none
+                     &none  &none  &none    &none  &none
+                            &none  &none    &none
             >;
 
             label = "MOUSE";
@@ -77,11 +79,12 @@
 
         scroll_layer {
             bindings = <
-&trans             &kp F1              &kp F2     &kp F3                       &kp F4                         &kp LS(F5)     &kp F6          &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans             &kp LS(UNDERSCORE)  &kp LC(W)  &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))          &trans  &kp N7  &kp N8  &kp N9  &trans   &kp F12
-&kp LC(BACKSPACE)  &kp LC(A)           &kp LC(S)  &trans                       &trans                         &trans                 &trans  &kp N4  &kp N5  &kp N6  &trans   &trans
-&bootloader        &kp LC(Z)           &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans                 &trans  &kp N1  &kp N2  &kp N3  &trans   &trans
-                   &trans              &trans     &trans                       &trans                         &trans         &trans          &kp N0          &trans
+&trans             &kp F1              &kp F2     &kp F3                       &kp F4                         &kp LS(F5)       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans             &kp LS(UNDERSCORE)  &kp LC(W)  &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))    &trans  &kp N7  &kp N8  &kp N9  &trans   &kp F12
+&kp LC(BACKSPACE)  &kp LC(A)           &kp LC(S)  &trans                       &trans                         &trans           &trans  &kp N4  &kp N5  &kp N6  &trans   &trans
+&bootloader        &kp LC(Z)           &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans           &trans  &kp N1  &kp N2  &kp N3  &trans   &trans
+                                                  &trans                       &trans                         &trans           &trans  &kp N0
+                                                                               &trans                         &trans           &trans
             >;
 
             label = "SCROLL";
@@ -89,21 +92,23 @@
 
         arrow_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans             &trans    &trans    &trans     &trans  &trans
-&trans      &trans        &trans  &trans  &trans  &trans          &kp PSCRN  &trans    &kp UP    &trans     &trans  &trans
-&trans      &trans        &trans  &trans  &trans  &trans          &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans      &trans        &trans  &trans  &trans  &trans          &trans     &trans    &trans    &trans     &trans  &bootloader
-            &mo 4         &trans  &trans  &trans  &trans  &trans             &trans              &trans
+&bt BT_CLR  &bt BT_SEL 0  &trans  &trans  &trans  &trans    &trans     &trans    &trans    &trans     &trans  &trans
+&trans      &trans        &trans  &trans  &trans  &trans    &kp PSCRN  &trans    &kp UP    &trans     &trans  &trans
+&trans      &trans        &trans  &trans  &trans  &trans    &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans      &trans        &trans  &trans  &trans  &trans    &trans     &trans    &trans    &trans     &trans  &bootloader
+                                  &trans  &trans  &mo 4     &trans     &trans
+                                          &trans  &trans    &trans
             >;
         };
 
         arrow_layer2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans     &trans   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &kp PG_UP  &trans   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &kp HOME  &kp PG_DN  &kp END  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans     &trans   &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans          &trans               &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &kp PG_UP  &trans   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME  &kp PG_DN  &kp END  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans     &trans   &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
             >;
         };
     };
