@@ -66,10 +66,10 @@
 
         mouse_layer {
             bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none     &none     &none       &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none     &none     &none       &none
-&none  &none  &none  &none  &none  &none    &none  &none  &mkp MB5  &none     &lmt 2 MB3  &mkp MB2
-&none  &none  &none  &none  &none  &none    &none  &none  &mkp MB4  &mkp MB1  &none       &none
+&none  &none  &none  &none  &none  &none    &none  &none     &none     &none       &none     &none
+&none  &none  &none  &none  &none  &none    &none  &none     &none     &none       &none     &none
+&none  &none  &none  &none  &none  &none    &none  &mkp MB5  &none     &lmt 2 MB3  &mkp MB2  &none
+&none  &none  &none  &none  &none  &none    &none  &mkp MB4  &mkp MB1  &none       &none     &none
                      &none  &none  &none    &none  &none
                             &none  &none    &none
             >;
