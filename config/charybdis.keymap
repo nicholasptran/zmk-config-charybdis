@@ -3,7 +3,7 @@
 #define SCROLL  2
 #define ARROW   3
 #define ARROW2  4
-#define KEYS_EXCLUDED_FROM_DISABLING_MOUSE_LAYER 31 33 34 43 44
+#define KEYS_EXCLUDED_FROM_DISABLING_MOUSE_LAYER 22 31 33 34 43 44
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
