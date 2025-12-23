@@ -50,7 +50,7 @@
 
         csharp_lambda {
             bindings = <&csharp_lambda>;
-            key-positions = <50 11>;
+            key-positions = <11 48>;
             layers = <0>;
         };
     };
@@ -113,11 +113,11 @@
 
         scroll_layer {
             bindings = <
-&trans             &kp F1              &kp F2     &kp F3                       &kp F4                         &kp LS(F5)       &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans             &kp LS(UNDERSCORE)  &kp LC(W)  &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))    &trans  &kp N7  &kp N8  &kp N9  &trans   &kp F12
-&kp LC(BACKSPACE)  &kp LC(A)           &kp LC(S)  &trans                       &trans                         &trans           &trans  &kp N4  &kp N5  &kp N6  &trans   &trans
-&bootloader        &kp LC(Z)           &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans           &trans  &kp N1  &kp N2  &kp N3  &trans   &trans
-                                                  &trans                       &trans                         &trans           &trans  &kp N0
+&trans             &kp F1              &kp F2     &kp F3                       &kp F4                         &mt LS(F5) F5    &kp F6     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans             &kp LS(UNDERSCORE)  &kp LC(W)  &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))    &kp PSCRN  &kp N7  &kp N8  &kp N9  &trans   &kp F12
+&kp LC(BACKSPACE)  &kp LC(A)           &kp LC(S)  &trans                       &trans                         &trans           &trans     &kp N4  &kp N5  &kp N6  &trans   &trans
+&bootloader        &kp LC(Z)           &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans           &trans     &kp N1  &kp N2  &kp N3  &trans   &trans
+                                                  &trans                       &trans                         &trans           &trans     &kp N0
                                                                                &trans                         &trans           &trans
             >;
 
