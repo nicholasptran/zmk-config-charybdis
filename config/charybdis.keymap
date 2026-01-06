@@ -104,6 +104,20 @@
             bindings = <&kp LS(LC(SPACE))>;
             label = "PARAMETER_INFO";
         };
+
+        ctrl: macro_ctrl_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LCTRL>;
+
+            label = "MACRO_CTRL_KP";
+        };
     };
 
     behaviors {
@@ -165,12 +179,12 @@
 
         scroll_layer {
             bindings = <
-&trans             &kp F1     &kp F2     &kp F3                       &kp F4                         &mt LS(F5) F5    &kp F6     &kp F7  &kp F8  &kp F9  &kp F10    &kp F11
-&trans             &as MINUS  &kp LC(W)  &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))    &kp PSCRN  &as N7  &as N8  &as N9  &as EQUAL  &kp F12
-&kp LC(BACKSPACE)  &kp LC(A)  &kp LC(S)  &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &trans           &trans     &as N4  &as N5  &as N6  &trans     &trans
-&bootloader        &kp LC(Z)  &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans           &trans     &as N1  &as N2  &as N3  &trans     &trans
-                                         &trans                       &trans                         &trans           &trans     &as N0
-                                                                      &trans                         &trans           &trans
+&trans             &kp F1           &kp F2     &kp F3                       &kp F4                         &mt LS(F5) F5    &kp F6     &kp F7  &kp F8  &kp F9  &kp F10    &kp F11
+&trans             &mt MINUS UNDER  &ctrl W    &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))    &kp PSCRN  &as N7  &as N8  &as N9  &as EQUAL  &kp F12
+&kp LC(BACKSPACE)  &kp LC(A)        &kp LC(S)  &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &trans           &trans     &as N4  &as N5  &as N6  &trans     &trans
+&bootloader        &kp LC(Z)        &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans           &trans     &as N1  &as N2  &as N3  &trans     &trans
+                                               &trans                       &trans                         &trans           &trans     &as N0
+                                                                            &trans                         &trans           &trans
             >;
 
             label = "SCROLL";
