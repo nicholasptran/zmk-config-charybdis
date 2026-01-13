@@ -51,7 +51,7 @@
         csharp_lambda {
             bindings = <&csharp_lambda>;
             key-positions = <11 48>;
-            layers = <1>;
+            layers = <0>;
         };
 
         tilde {
@@ -151,17 +151,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        toggle_as {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
-            >;
-        };
-
         default_layer {
             bindings = <
 &as MINUS      &as N1       &as N2  &as N3        &as N4     &as N5        &as N6         &as N7     &as N8     &as N9   &as N0    &as EQUAL
@@ -173,6 +162,17 @@
             >;
 
             label = "QWRT";
+        };
+
+        toggle_as {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
+            >;
         };
 
         mouse_layer {
@@ -192,7 +192,7 @@
             bindings = <
 &trans             &kp F1           &kp F2     &kp F3                       &kp F4                         &mt LS(F5) F5    &kp F6     &kp F7  &kp F8  &kp F9  &kp F10    &kp F11
 &trans             &mt MINUS UNDER  &ctrl W    &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))    &kp PSCRN  &as N7  &as N8  &as N9  &as EQUAL  &kp F12
-&kp LC(BACKSPACE)  &kp LC(A)        &kp LC(S)  &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &trans           &tog 0     &as N4  &as N5  &as N6  &trans     &trans
+&kp LC(BACKSPACE)  &kp LC(A)        &kp LC(S)  &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &trans           &tog 1     &as N4  &as N5  &as N6  &trans     &trans
 &bootloader        &kp LC(Z)        &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans           &trans     &as N1  &as N2  &as N3  &trans     &trans
                                                &trans                       &trans                         &trans           &trans     &as N0
                                                                             &trans                         &trans           &trans
@@ -240,7 +240,7 @@
         compatible = "zmk,conditional-layers";
 
         toggle_as {
-            if-layers = <1 0>;
+            if-layers = <0 1>;
             then-layer = <6>;
         };
     };
