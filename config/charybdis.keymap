@@ -1,8 +1,8 @@
 #define DEFAULT 0
-#define MOUSE   1
-#define SCROLL  2
-#define ARROW   3
-#define ARROW2  4
+#define MOUSE   2
+#define SCROLL  3
+#define ARROW   4
+#define ARROW2  5
 #define KEYS_EXCLUDED_FROM_DISABLING_MOUSE_LAYER 22 31 33 34 43 44
 
 #include <dt-bindings/zmk/mouse.h>
