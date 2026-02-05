@@ -50,7 +50,7 @@
 
         csharp_lambda {
             bindings = <&csharp_lambda>;
-            key-positions = <11 48>;
+            key-positions = <48 22>;
             layers = <0>;
         };
 
