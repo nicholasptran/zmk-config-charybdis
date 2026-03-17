@@ -20,7 +20,6 @@
         &zip_x_scaler 11 10
         &zip_y_scaler 9 10
         &zip_temp_layer MOUSE 500
-        &pointer_accel
     >;
 
     scroller: scroller {
