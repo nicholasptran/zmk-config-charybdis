@@ -1,4 +1,6 @@
 #include "charybdis.dtsi"
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 
 &default_transform {
 	col-offset = <6>;
@@ -32,6 +34,16 @@
             low-power-enable;
         };
     };
+};
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    min-factor = <800>;        // Slight slowdown for precision
+    max-factor = <3000>;       // Good acceleration for large movements
+    speed-threshold = <1200>;  // Balanced acceleration point
+    speed-max = <6000>;
+    acceleration-exponent = <2>; // Smooth quadratic curve
+    track-remainders;         // Track fractional movements
 };
 
 &spi0 {
@@ -68,5 +80,8 @@
     compatible = "zmk,input-listener";
     status = "okay";
     device = <&trackball>;
+    input-processors = <
+        &pointer_accel
+    >;
   };
 };
