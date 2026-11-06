@@ -122,7 +122,7 @@
         as_tog: auto_shift_toggle {
             compatible = "zmk,behavior-auto-shift";
             #binding-cells = <0>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <100>;
             enabled-on-boot;
         };
     };
