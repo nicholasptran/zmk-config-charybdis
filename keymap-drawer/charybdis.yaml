@@ -1,53 +1,53 @@
 layout: {zmk_keyboard: charybdis, layout_name: default_transform}
 layers:
   QWRT:
-  - '&as MINUS'
-  - '&as N1'
-  - '&as N2'
-  - '&as N3'
-  - '&as N4'
-  - '&as N5'
-  - '&as N6'
-  - '&as N7'
-  - '&as N8'
-  - '&as N9'
-  - '&as N0'
-  - '&as EQUAL'
+  - '-'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '='
   - TAB
-  - '&as Q'
-  - '&as W'
-  - '&as E'
-  - '&as R'
-  - '&as T'
-  - '&as Y'
-  - '&as U'
-  - '&as I'
-  - '&as O'
-  - '&as P'
-  - '&as BACKSLASH'
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - \
   - BACKSPACE
-  - '&as A'
-  - '&as S'
-  - '&as D'
-  - '&as F'
-  - '&as G'
-  - '&as H'
-  - '&as J'
-  - '&as K'
-  - '&as L'
-  - '&as SEMI'
-  - '&as APOS'
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
   - LCTRL
   - {t: Z, h: LCTRL}
-  - '&as X'
-  - '&as C'
-  - '&as V'
-  - '&as B'
-  - '&as N'
-  - '&as M'
-  - '&as COMMA'
-  - '&as DOT'
-  - '&as FSLH'
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
   - RCTRL
   - LEFT ALT
   - {t: SPACE, h: MOUSE}
@@ -134,10 +134,10 @@ layers:
   - {t: '}', h: ']'}
   - Ctl+Sft+T
   - PSCRN
-  - '&as N7'
-  - '&as N8'
-  - '&as N9'
-  - '&as EQUAL'
+  - '7'
+  - '8'
+  - '9'
+  - '='
   - F12
   - Ctl+BACKSPACE
   - Ctl+A
@@ -146,9 +146,9 @@ layers:
   - )
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&as N4'
-  - '&as N5'
-  - '&as N6'
+  - '4'
+  - '5'
+  - '6'
   - {t: ▽, type: trans}
   - DEL
   - '&bootloader'
@@ -158,16 +158,16 @@ layers:
   - Ctl+V
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&as N1'
-  - '&as N2'
-  - '&as N3'
+  - '1'
+  - '2'
+  - '3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - '&as N0'
+  - '0'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -177,7 +177,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&as_tog'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
