@@ -1,0 +1,297 @@
+layout: {zmk_keyboard: charybdis, layout_name: default_transform}
+layers:
+  QWRT:
+  - '&as MINUS'
+  - '&as N1'
+  - '&as N2'
+  - '&as N3'
+  - '&as N4'
+  - '&as N5'
+  - '&as N6'
+  - '&as N7'
+  - '&as N8'
+  - '&as N9'
+  - '&as N0'
+  - '&as EQUAL'
+  - TAB
+  - '&as Q'
+  - '&as W'
+  - '&as E'
+  - '&as R'
+  - '&as T'
+  - '&as Y'
+  - '&as U'
+  - '&as I'
+  - '&as O'
+  - '&as P'
+  - '&as BACKSLASH'
+  - BACKSPACE
+  - '&as A'
+  - '&as S'
+  - '&as D'
+  - '&as F'
+  - '&as G'
+  - '&as H'
+  - '&as J'
+  - '&as K'
+  - '&as L'
+  - '&as SEMI'
+  - '&as APOS'
+  - LCTRL
+  - {t: Z, h: LCTRL}
+  - '&as X'
+  - '&as C'
+  - '&as V'
+  - '&as B'
+  - '&as N'
+  - '&as M'
+  - '&as COMMA'
+  - '&as DOT'
+  - '&as FSLH'
+  - RCTRL
+  - LEFT ALT
+  - {t: SPACE, h: MOUSE}
+  - SCROLL
+  - arrow
+  - ENTER
+  - {t: ESC, s: '`'}
+  - LSHIFT
+  - RIGHT GUI
+  MOUSE:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mkp MB2'
+  - ''
+  - ''
+  - ''
+  - PREV
+  - PP
+  - NEXT
+  - ''
+  - ''
+  - '&mkp MB5'
+  - ''
+  - {t: '&mkp MB3', h: SCROLL}
+  - '&mkp MB2'
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mkp MB4'
+  - '&mkp MB1'
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  SCROLL:
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - {t: F5, h: Sft+F5}
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - {t: ▽, type: trans}
+  - {t: _, h: '-'}
+  - '&ctrl W'
+  - {t: '{', h: '['}
+  - {t: '}', h: ']'}
+  - Ctl+Sft+T
+  - PSCRN
+  - '&as N7'
+  - '&as N8'
+  - '&as N9'
+  - '&as EQUAL'
+  - F12
+  - Ctl+BACKSPACE
+  - Ctl+A
+  - Ctl+S
+  - (
+  - )
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&as N4'
+  - '&as N5'
+  - '&as N6'
+  - {t: ▽, type: trans}
+  - DEL
+  - '&bootloader'
+  - Ctl+Z
+  - Ctl+X
+  - Ctl+C
+  - Ctl+V
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&as N1'
+  - '&as N2'
+  - '&as N3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - '&as N0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  arrow:
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - RANDOM PLAY
+  - VOLUME UP
+  - REPEAT
+  - {t: ▽, type: trans}
+  - PSCRN
+  - {t: ▽, type: trans}
+  - UP
+  - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PREV
+  - PP
+  - NEXT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - RIGHT
+  - '='
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - VOLUME DOWN
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - arrow_layer2
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  arrow_layer2:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PG UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - PG DN
+  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [0, 1]
+  k: ESC
+- p: [48, 22]
+  k: '&csharp_lambda'
+  l: [QWRT]
+- p: [11, 10]
+  k: '~'
+- p: [36, 54]
+  k: '&pi'
