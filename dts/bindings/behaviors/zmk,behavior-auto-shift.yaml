@@ -1,0 +1,14 @@
+description: Global auto shift toggle
+
+compatible: "zmk,behavior-auto-shift"
+
+include: zero_param.yaml
+
+properties:
+  tapping-term-ms:
+    type: int
+    default: 170
+    description: Hold time after which an eligible key is sent shifted.
+  enabled-on-boot:
+    type: boolean
+    description: Start with auto shift enabled.
