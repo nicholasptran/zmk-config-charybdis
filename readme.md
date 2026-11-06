@@ -22,7 +22,7 @@ Tuning knobs on `&pointer_accel` (factors are x1000, speeds are raw counts/sec):
 
 | Property | Value | Effect |
 | --- | --- | --- |
-| `min-factor` | `600` | Multiplier for slow movement (0.6x). Raise toward `1000` if fine aiming feels sluggish. |
+| `min-factor` | `450` | Multiplier for slow movement (0.45x). Raise toward `1000` if fine aiming feels sluggish. |
 | `max-factor` | `3000` | Multiplier at full speed (3.0x). Lower if fast flicks overshoot. |
 | `speed-threshold` | `1200` | Speed where acceleration starts. |
 | `speed-max` | `6000` | Speed where `max-factor` is reached. |
