@@ -9,16 +9,17 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <behaviors/input_gestures_accel.dtsi>
 
 // Pointer acceleration (oleksandrmaslov/zmk-pointing-acceleration).
 // Speeds are raw sensor counts/sec at cpi 1000; factors are x1000.
+
 &pointer_accel {
-	input-type = <INPUT_EV_REL>;
+    input-type = <INPUT_EV_REL>;
     track-remainders;
     min-factor = <450>;
     max-factor = <2500>;
@@ -138,12 +139,12 @@
 
         default_layer {
             bindings = <
-&kp MINUS      &kp N1       &kp N2  &kp N3        &kp N4       &kp N5        &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &kp EQUAL
-&kp TAB        &kp Q        &kp W   &kp E         &kp R        &kp T         &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
-&kp BACKSPACE  &kp A        &kp S   &kp D         &kp F        &kp G         &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LCTRL      &mt LCTRL Z  &kp X   &kp C         &kp V        &kp B         &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
-                                    &kp LEFT_ALT  &lt 1 SPACE  &mo 2         &mo 3         &kp ENTER
-                                                  &gresc       &kp LSHIFT    &kp RIGHT_GUI
+&kp MINUS      &kp N1  &kp N2  &kp N3        &kp N4       &kp N5        &kp N6         &kp N7     &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB        &kp Q   &kp W   &kp E         &kp R        &kp T         &kp Y          &kp U      &kp I      &kp O    &kp P     &kp BACKSLASH
+&kp BACKSPACE  &kp A   &kp S   &kp D         &kp F        &kp G         &kp H          &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LCTRL      &kp Z   &kp X   &kp C         &kp V        &kp B         &kp N          &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RCTRL
+                               &kp LEFT_ALT  &lt 1 SPACE  &mo 2         &mo 3          &kp ENTER
+                                             &gresc       &kp LSHIFT    &kp RIGHT_GUI
             >;
 
             label = "QWRT";
@@ -164,12 +165,12 @@
 
         scroll_layer {
             bindings = <
-&trans             &kp F1           &kp F2     &kp F3                       &kp F4                         &mt LS(F5) F5    &kp F6     &kp F7  &kp F8  &kp F9  &kp F10    &kp F11
-&trans             &mt MINUS UNDER  &ctrl W    &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))    &kp PSCRN  &kp N7  &kp N8  &kp N9  &kp EQUAL  &kp F12
-&kp LC(BACKSPACE)  &kp LC(A)        &kp LC(S)  &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &trans           &trans     &kp N4  &kp N5  &kp N6  &trans     &kp DEL
-&bootloader        &kp LC(Z)        &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans           &trans     &kp N1  &kp N2  &kp N3  &trans     &trans
-                                               &trans                       &trans                         &trans           &trans     &kp N0
-                                                                            &trans                         &trans           &trans
+&trans             &kp F1     &kp F2     &kp F3                       &kp F4                         &mt LS(F5) F5    &kp F6     &kp F7  &kp F8  &kp F9  &kp F10    &kp F11
+&trans             &kp MINUS  &ctrl W    &mt LEFT_BRACKET LEFT_BRACE  &mt RIGHT_BRACKET RIGHT_BRACE  &kp LC(LS(T))    &kp PSCRN  &kp N7  &kp N8  &kp N9  &kp EQUAL  &kp F12
+&kp LC(BACKSPACE)  &kp LC(A)  &kp LC(S)  &kp LEFT_PARENTHESIS         &kp RIGHT_PARENTHESIS          &trans           &trans     &kp N4  &kp N5  &kp N6  &trans     &kp DEL
+&bootloader        &kp LC(Z)  &kp LC(X)  &kp LC(C)                    &kp LC(V)                      &trans           &trans     &kp N1  &kp N2  &kp N3  &trans     &trans
+                                         &trans                       &trans                         &trans           &trans     &kp N0
+                                                                      &trans                         &trans           &trans
             >;
 
             label = "SCROLL";
@@ -177,12 +178,12 @@
 
         arrow_layer {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &trans             &trans             &trans        &as_tog   &trans    &trans    &trans    &trans     &trans     &trans
-&trans      &trans        &kp C_RANDOM_PLAY  &kp C_VOLUME_UP    &kp C_REPEAT  &trans    &kp PSCRN  &trans    &kp UP    &kp EQUAL  &trans     &trans
-&trans      &trans        &kp C_PREV         &kp C_PP           &kp C_NEXT    &trans    &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &kp EQUAL  &trans
-&trans      &trans        &trans             &kp C_VOLUME_DOWN  &trans        &trans    &trans     &trans    &trans    &trans     &trans     &bootloader
-                                             &trans             &trans        &mo 4     &trans    &trans
-                                                                &trans        &trans    &trans
+&bt BT_CLR  &bt BT_SEL 0  &trans             &trans             &trans        &as_tog    &trans     &trans    &trans    &trans     &trans     &trans
+&trans      &trans        &kp C_RANDOM_PLAY  &kp C_VOLUME_UP    &kp C_REPEAT  &trans     &kp PSCRN  &trans    &kp UP    &kp EQUAL  &trans     &trans
+&trans      &trans        &kp C_PREV         &kp C_PP           &kp C_NEXT    &trans     &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &kp EQUAL  &trans
+&trans      &trans        &trans             &kp C_VOLUME_DOWN  &trans        &trans     &trans     &trans    &trans    &trans     &trans     &bootloader
+                                             &trans             &trans        &mo 4      &trans     &trans
+                                                                &trans        &trans     &trans
             >;
         };
 
@@ -198,7 +199,5 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
