@@ -10,7 +10,8 @@ Branch: `global-autoshift`. Status ledger:
 - [x] **Phase 1 — extract the module into its own repo.** `nicholasptran/zmk-auto-shift` @ `ddbdd26`
   (`main`): the four files byte-identical to this branch, `module.yml` `name: zmk-auto-shift` with
   only `dts_root`, README written, template placeholders and `west.yml` removed.
-- [ ] **Phase 2 — import the module here, delete the in-repo copy.**
+- [x] **Phase 2 — import the module here, delete the in-repo copy.** `a2cb83b`; CI run 42860405249
+  green on all three targets, `charybdis_right` compiled `zmk-auto-shift/src/auto_shift.c`.
 - [ ] **Phase 3 — merge `global-autoshift` into `main`.**
 
 ## Decisions already made
