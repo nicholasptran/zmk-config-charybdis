@@ -38,7 +38,7 @@ layers:
   - ;
   - ''''
   - LCTRL
-  - {t: Z, h: LCTRL}
+  - Z
   - X
   - C
   - V
@@ -128,7 +128,7 @@ layers:
   - F10
   - F11
   - {t: ▽, type: trans}
-  - {t: _, h: '-'}
+  - '-'
   - '&ctrl W'
   - {t: '{', h: '['}
   - {t: '}', h: ']'}
