@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/badjeff
     - name: oleksandrmaslov
       url-base: https://github.com/oleksandrmaslov
+    - name: nicholasptran
+      url-base: https://github.com/nicholasptran
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -16,6 +18,9 @@ manifest:
       revision: main
     - name: zmk-pointing-acceleration
       remote: oleksandrmaslov
+      revision: main
+    - name: zmk-auto-shift
+      remote: nicholasptran
       revision: main
   self:
     path: config

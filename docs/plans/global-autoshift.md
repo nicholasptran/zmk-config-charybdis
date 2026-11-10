@@ -7,7 +7,9 @@ Branch: `global-autoshift`. Status ledger:
   CI green on all three targets (run 42282323042); `auto_shift.c` compiles in the
   `charybdis_right` build, which is the split central (`Kconfig.defconfig:1-6`). Flashed and confirmed
   working by the user.
-- [ ] **Phase 1 — extract the module into its own repo.**
+- [x] **Phase 1 — extract the module into its own repo.** `nicholasptran/zmk-auto-shift` @ `ddbdd26`
+  (`main`): the four files byte-identical to this branch, `module.yml` `name: zmk-auto-shift` with
+  only `dts_root`, README written, template placeholders and `west.yml` removed.
 - [ ] **Phase 2 — import the module here, delete the in-repo copy.**
 - [ ] **Phase 3 — merge `global-autoshift` into `main`.**
 
